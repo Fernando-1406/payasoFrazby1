@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="floating-wpp.css">
+	<script type="text/javascript" src="floating-wpp.js"></script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--JQuery-->  
+
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Shows Infantiles</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>  
+<!--Floating WhatsApp css-->  
+<link rel="stylesheet" href="floating-wpp.min.css">  
+<!--Floating WhatsApp javascript-->  
+<script type="text/javascript" src="floating-wpp.min.js"></script>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="assets/imges/favicon.ico"/>
     <!-- Font Awesome -->
@@ -47,10 +58,9 @@
                 background-size: cover;
           }
       </style>
+   
   </head>
   <body background="fondo.jpg"  >
-  
-
   	<!-- Start Header -->
 	<header id="mu-header" class="" role="banner">
 		<div class="container">
@@ -74,17 +84,7 @@
 
 		    </div>
 
-		    <!-- Collect the nav links, forms, and other content for toggling -->
-		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		      	<ul class="nav navbar-nav mu-menu navbar-right">
-			        <li><a href="#">Inicio</a></li>
-			        <li><a href="#mu-about">¿Quienes somos?</a></li>
-			        <li><a href="#mu-service">Servicios</a></li>
-		            <li><a href="#mu-portfolio">Galeria</a></li>
-	
-		            <li><a href="#mu-contact">Contacto</a></li>
-		      	</ul>
-		    </div><!-- /.navbar-collapse -->
+                    
 		  </div><!-- /.container-fluid -->
 		</nav>
 		</div>
@@ -144,7 +144,7 @@
 							<div class="mu-about-header">
 								<h2 class="mu-heading-title">¿Quienes <span>Somos?</span></h2>
 								<span class="mu-header-dot"></span>
-								<p>Los mejores shows para tu evento infantil, fiestas temáticas y decoración, el mejor servicio y calidad de paquetes económicos.</p>
+								<p>El mejor show para un evento infantil, adultos, y masivos con excelente servicio, variedad y paquetes especiales solo para ti.</p>
 							</div>
 
 							<!-- Start About Us Content -->
@@ -222,7 +222,7 @@
 												<img src="assets/images/show.jpg">
 											</span>
 											<h4>Show de máxima diversión </h4>
-											<p>El payaso Frizby es experto en fiestas infantiles en la CDMX.</p>
+											<p>El payaso Frizby es experto en fiestas infantiles en la ciudad y estado de México.</p>
 										</div>
 									</div>
 									<!-- / Service Single Content -->
@@ -485,7 +485,9 @@
 		
 
 		
-		<!-- Start Contact -->
+		<div id="WAButton">
+        
+    </div>
 		
 
 							<div class="mu-contact-header">
@@ -497,24 +499,24 @@
 							<!-- Start Contact Content -->
 							<div class="mu-contact-content">
 								<div class="row">
-
-									
-											
-										
+                                                                    
 
 									<div class="col-md-4">
 										<div class="mu-contact-right">
 											<h4>Payaso Frizby</h4>
 											
 											<address>
-												<p><i class="icon-location-pin"></i>Dooley Branch Rd Millen, GA 30442, USA</p>
+												
 												<p><i class="icon-envelope"></i>enriqueandradeg29@gmail.com</p>
 												<p><i class="icon-phone"></i>+52 5562987536</p>
 											</address>
 											<div class="mu-social-media">
 												<a href="https://www.facebook.com/Payaso-frizby-show-460756910630541/"><i class="icon-social-facebook"></i></a>
-												<a href=""><i class="icon-social-twitter"></i></a>
+												 
 												<a href="https://www.youtube.com/channel/UCK4eZZVgC8cvDIlAYTSE_Hg"><i class="icon-social-youtube"></i></a>
+                                                                                                <!--Div where the WhatsApp will be rendered-->  
+                                                                                                
+
 											</div>
 										</div>
 									</div>	
@@ -525,6 +527,8 @@
 
 					
 		<!-- End Contact -->
+
+		<div id="myButton"></div>
 
 		
 	</main>
@@ -567,4 +571,22 @@
 	
     
   </body>
+  <script type="text/javascript">
+    $(function () {
+        $('#myButton').floatingWhatsApp({
+            phone: '+52 5562987536',
+            popupMessage: 'Saludos del payaso Frizby !¿Te gustaría contratar mis servicios?',
+            message: "",
+            showPopup: true,
+            showOnIE: false,
+            headerTitle: 'Bienvenido!',
+            headerColor: 'crimson',
+            backgroundColor: 'crimson',
+            buttonImage: '<img src="whatsapp.svg" />'
+        });
+    });
+</script>
 </html>
+   
+   
+
